@@ -14,7 +14,8 @@
 		E2A8DB7D21F5DC120031AC58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2A8DB7B21F5DC120031AC58 /* LaunchScreen.storyboard */; };
 		E2A8DB8C21F5DD2E0031AC58 /* Circuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A8DB8B21F5DD2E0031AC58 /* Circuit.swift */; };
 		E2A8DB8D21F5DF480031AC58 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A8DB8721F5DC640031AC58 /* libresolv.tbd */; };
-		E2A8DB8F21F5EEA20031AC58 /* libplasma_cash_history_snark.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A8DB8521F5DC540031AC58 /* libplasma_cash_history_snark.a */; };
+		E2A8DB9221F5F53E0031AC58 /* libplasma_cash_history_snark.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A8DB8521F5DC540031AC58 /* libplasma_cash_history_snark.a */; };
+		E2A8DB9521F5F5630031AC58 /* SparseMerkleTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A8DB9421F5F5630031AC58 /* SparseMerkleTree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		E2A8DB8A21F5DCBE0031AC58 /* PlasmaCashHistorySnark-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlasmaCashHistorySnark-Bridging-Header.h"; sourceTree = "<group>"; };
 		E2A8DB8B21F5DD2E0031AC58 /* Circuit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circuit.swift; sourceTree = "<group>"; };
 		E2A8DB8E21F5EE870031AC58 /* circuit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = circuit.h; path = ../../../cargo/src/circuit/circuit.h; sourceTree = "<group>"; };
+		E2A8DB9321F5F5500031AC58 /* sparse_merkle_tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sparse_merkle_tree.h; path = ../../../cargo/src/sparse_merkle_tree/sparse_merkle_tree.h; sourceTree = "<group>"; };
+		E2A8DB9421F5F5630031AC58 /* SparseMerkleTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparseMerkleTree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2A8DB8F21F5EEA20031AC58 /* libplasma_cash_history_snark.a in Frameworks */,
+				E2A8DB9221F5F53E0031AC58 /* libplasma_cash_history_snark.a in Frameworks */,
 				E2A8DB8D21F5DF480031AC58 /* libresolv.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,9 +68,11 @@
 		E2A8DB7121F5DC0F0031AC58 /* PlasmaCashHistorySnark */ = {
 			isa = PBXGroup;
 			children = (
+				E2A8DB9321F5F5500031AC58 /* sparse_merkle_tree.h */,
 				E2A8DB8E21F5EE870031AC58 /* circuit.h */,
 				E2A8DB8A21F5DCBE0031AC58 /* PlasmaCashHistorySnark-Bridging-Header.h */,
 				E2A8DB8B21F5DD2E0031AC58 /* Circuit.swift */,
+				E2A8DB9421F5F5630031AC58 /* SparseMerkleTree.swift */,
 				E2A8DB7221F5DC0F0031AC58 /* AppDelegate.swift */,
 				E2A8DB7421F5DC0F0031AC58 /* ViewController.swift */,
 				E2A8DB7621F5DC0F0031AC58 /* Main.storyboard */,
@@ -161,6 +166,7 @@
 				E2A8DB7521F5DC0F0031AC58 /* ViewController.swift in Sources */,
 				E2A8DB8C21F5DD2E0031AC58 /* Circuit.swift in Sources */,
 				E2A8DB7321F5DC0F0031AC58 /* AppDelegate.swift in Sources */,
+				E2A8DB9521F5F5630031AC58 /* SparseMerkleTree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

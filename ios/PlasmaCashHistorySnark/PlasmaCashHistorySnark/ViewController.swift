@@ -12,8 +12,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Circuit().perform()
-        print("wow")
+        Circuit().test()
+        print("Circuit tested")
+        SparseMerkleTree().test()
+        print("Sparse merkle tree tested")
     }
 
 

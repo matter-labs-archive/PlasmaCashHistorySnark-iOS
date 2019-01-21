@@ -10,5 +10,6 @@
 #define PlasmaCashHistorySnark_Bridging_Header_h
 
 #import "circuit.h"
+#import "sparse_merkle_tree.h"
 
 #endif /* PlasmaCashHistorySnark_Bridging_Header_h */

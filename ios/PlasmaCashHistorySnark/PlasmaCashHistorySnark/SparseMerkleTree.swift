@@ -1,5 +1,5 @@
 //
-//  Benchmark.swift
+//  SparseMerkleTree.swift
 //  PlasmaCashHistorySnark
 //
 //  Created by Anton Grigorev on 21/01/2019.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Circuit {
+class SparseMerkleTree {
     func test() {
-        test_non_inclusion_proof()
+        test_pedersen_hash()
     }
 }
