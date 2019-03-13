@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         print("Circuit tested")
         SparseMerkleTree().test()
         print("Sparse merkle tree tested")
+        print("Tests finished")
     }
 
 

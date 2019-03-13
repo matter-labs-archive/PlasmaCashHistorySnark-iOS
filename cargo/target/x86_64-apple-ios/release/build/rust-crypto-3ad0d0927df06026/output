@@ -1,0 +1,62 @@
+TARGET = Some("x86_64-apple-ios")
+OPT_LEVEL = Some("3")
+TARGET = Some("x86_64-apple-ios")
+HOST = Some("x86_64-apple-darwin")
+TARGET = Some("x86_64-apple-ios")
+TARGET = Some("x86_64-apple-ios")
+HOST = Some("x86_64-apple-darwin")
+CC_x86_64-apple-ios = None
+CC_x86_64_apple_ios = None
+TARGET_CC = None
+CC = None
+HOST = Some("x86_64-apple-darwin")
+CROSS_COMPILE = None
+TARGET = Some("x86_64-apple-ios")
+HOST = Some("x86_64-apple-darwin")
+CFLAGS_x86_64-apple-ios = None
+CFLAGS_x86_64_apple_ios = None
+TARGET_CFLAGS = None
+CFLAGS = None
+DEBUG = Some("false")
+TARGET = Some("x86_64-apple-ios")
+Detecting iOS SDK path for iphonesimulator
+running: "cc" "-O3" "-ffunction-sections" "-fdata-sections" "-fPIC" "-m64" "-m64" "-mios-simulator-version-min=7.0" "-isysroot" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk" "-Wall" "-Wextra" "-o" "/Users/anton/Developer/PlasmaCashHistorySnark-iOS/cargo/target/x86_64-apple-ios/release/build/rust-crypto-3ad0d0927df06026/out/src/util_helpers.o" "-c" "src/util_helpers.c"
+exit code: 0
+TARGET = Some("x86_64-apple-ios")
+OPT_LEVEL = Some("3")
+TARGET = Some("x86_64-apple-ios")
+HOST = Some("x86_64-apple-darwin")
+TARGET = Some("x86_64-apple-ios")
+TARGET = Some("x86_64-apple-ios")
+HOST = Some("x86_64-apple-darwin")
+CC_x86_64-apple-ios = None
+CC_x86_64_apple_ios = None
+TARGET_CC = None
+CC = None
+HOST = Some("x86_64-apple-darwin")
+CROSS_COMPILE = None
+TARGET = Some("x86_64-apple-ios")
+HOST = Some("x86_64-apple-darwin")
+CFLAGS_x86_64-apple-ios = None
+CFLAGS_x86_64_apple_ios = None
+TARGET_CFLAGS = None
+CFLAGS = None
+DEBUG = Some("false")
+TARGET = Some("x86_64-apple-ios")
+Detecting iOS SDK path for iphonesimulator
+running: "cc" "-O3" "-ffunction-sections" "-fdata-sections" "-fPIC" "-m64" "-m64" "-mios-simulator-version-min=7.0" "-isysroot" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk" "-Wall" "-Wextra" "-o" "/Users/anton/Developer/PlasmaCashHistorySnark-iOS/cargo/target/x86_64-apple-ios/release/build/rust-crypto-3ad0d0927df06026/out/src/aesni_helpers.o" "-c" "src/aesni_helpers.c"
+exit code: 0
+TARGET = Some("x86_64-apple-ios")
+TARGET = Some("x86_64-apple-ios")
+HOST = Some("x86_64-apple-darwin")
+AR_x86_64-apple-ios = None
+AR_x86_64_apple_ios = None
+TARGET_AR = None
+AR = None
+TARGET = Some("x86_64-apple-ios")
+TARGET = Some("x86_64-apple-ios")
+running: "ar" "crs" "/Users/anton/Developer/PlasmaCashHistorySnark-iOS/cargo/target/x86_64-apple-ios/release/build/rust-crypto-3ad0d0927df06026/out/lib_rust_crypto_helpers.a" "/Users/anton/Developer/PlasmaCashHistorySnark-iOS/cargo/target/x86_64-apple-ios/release/build/rust-crypto-3ad0d0927df06026/out/src/util_helpers.o" "/Users/anton/Developer/PlasmaCashHistorySnark-iOS/cargo/target/x86_64-apple-ios/release/build/rust-crypto-3ad0d0927df06026/out/src/aesni_helpers.o"
+exit code: 0
+TARGET = Some("x86_64-apple-ios")
+cargo:rustc-link-lib=static=_rust_crypto_helpers
+cargo:rustc-link-search=native=/Users/anton/Developer/PlasmaCashHistorySnark-iOS/cargo/target/x86_64-apple-ios/release/build/rust-crypto-3ad0d0927df06026/out
