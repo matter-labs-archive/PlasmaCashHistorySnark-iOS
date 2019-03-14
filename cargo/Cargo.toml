@@ -11,7 +11,7 @@ edition = "2018"
 
 [lib]
 name = "plasma_cash_history_snark"
-crate-type = ["staticlib", "cdylib"]
+crate-type = ["lib", "staticlib"]
 path = "src/lib.rs"
 
 [dependencies]

@@ -348,7 +348,7 @@ const TREE_DEPTH: u32 = 24;
 const NUMBER_OF_BLOCKS_TO_PROVE: u32 = 1;
 
 #[no_mangle]
-pub extern fn test_non_inclusion_proof_for_ios() {
+pub extern "C" fn test_non_inclusion_proof_for_ios() {
     use ff::{Field};
     use pairing::bn256::*;
     use rand::{SeedableRng, Rng, XorShiftRng, Rand};

@@ -47,7 +47,7 @@ impl Default for PedersenHasher<Bn256> {
 }
 
 #[no_mangle]
-pub extern fn test_pedersen_hash_for_ios() {
+pub extern "C" fn test_pedersen_hash_for_ios() {
     let hasher = BabyPedersenHasher::default();
 
     let hash = hasher.hash_bits(vec![false, false, false, true, true, true, true, true]);
