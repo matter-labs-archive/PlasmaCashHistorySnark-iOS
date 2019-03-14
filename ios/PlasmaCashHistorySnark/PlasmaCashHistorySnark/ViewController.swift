@@ -12,13 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Circuit().test()
-        print("Circuit tested")
-        SparseMerkleTree().test()
-        print("Sparse merkle tree tested")
+        NonInclusion().test()
+        print("Non inclusion tested \n--------------------\n")
+        PedersenHasher().test()
+        print("Pedersen hasher tested \n--------------------\n")
+        BenchmarkProofGen().test()
         print("Tests finished")
     }
-
 
 }
 

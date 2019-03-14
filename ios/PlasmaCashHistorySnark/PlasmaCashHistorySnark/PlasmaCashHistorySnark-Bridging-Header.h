@@ -9,7 +9,8 @@
 #ifndef PlasmaCashHistorySnark_Bridging_Header_h
 #define PlasmaCashHistorySnark_Bridging_Header_h
 
-#import "circuit.h"
-#import "sparse_merkle_tree.h"
+#import "benchmark_proof_gen.h"
+#import "non_inclusion.h"
+#import "pedersen_hasher.h"
 
 #endif /* PlasmaCashHistorySnark_Bridging_Header_h */

@@ -347,7 +347,7 @@ impl<'a, E: JubjubEngine> Circuit<E> for NonInclusion<'a, E> {
 const TREE_DEPTH: u32 = 24;
 const NUMBER_OF_BLOCKS_TO_PROVE: u32 = 1;
 
-// #[test]
+//#[test]
 #[no_mangle]
 pub extern fn test_non_inclusion_proof() {
     use ff::{Field};

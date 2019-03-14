@@ -26,7 +26,8 @@ use bellman::groth16::{
 const TREE_DEPTH: u32 = 24;
 const NUMBER_OF_BLOCKS_TO_PROVE: u32 = 128;
 
-fn main() {
+#[no_mangle]
+pub extern fn main() {
     let params = &AltJubjubBn256::new();
 
     let rng = &mut XorShiftRng::from_seed([0x3dbe6258, 0x8d313d76, 0x3237db17, 0xe5bc0654]);
