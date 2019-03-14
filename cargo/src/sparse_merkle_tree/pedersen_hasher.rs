@@ -1,7 +1,5 @@
 // Pedersen hash implementation of the Hasher trait
 
-use std::os::raw::{c_char};
-use std::ffi::{CString, CStr};
 use ff::{Field, PrimeField, PrimeFieldRepr};
 use rand::{Rand, thread_rng};
 use sapling_crypto::pedersen_hash::{baby_pedersen_hash, Personalization};
@@ -48,19 +46,18 @@ impl Default for PedersenHasher<Bn256> {
     }
 }
 
-//#[test]
 #[no_mangle]
-pub extern fn test_pedersen_hash() {
+pub extern fn test_pedersen_hash_for_ios() {
     let hasher = BabyPedersenHasher::default();
 
-    let hash = hasher.hash_bits(vec![false, false, false, true, true, true, true, true, true]);
-    println!("hash:  {:?}", &hash);
+    let hash = hasher.hash_bits(vec![false, false, false, true, true, true, true, true]);
+    //println!("hash:  {:?}", &hash);
 
     let hash2 = hasher.compress(&hash, &hash, 0);
-    println!("compr: {:?}", &hash2);
+    //println!("compr: {:?}", &hash2);
 
     let hash3 = hasher.compress(&hash, &hash, 1);
-    println!("compr: {:?}", &hash3);
+    //println!("compr: {:?}", &hash3);
 
     //assert_eq!(hasher.empty_hash(),
 }

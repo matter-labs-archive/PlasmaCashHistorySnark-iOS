@@ -10,6 +10,6 @@ import Foundation
 
 class PedersenHasher {
     func test() {
-        test_pedersen_hash()
+        test_pedersen_hash_for_ios()
     }
 }

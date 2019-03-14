@@ -10,6 +10,6 @@ import Foundation
 
 class BenchmarkProofGen {
     func test() {
-        main()
+        test_benchmark_proof_gen_for_ios()
     }
 }

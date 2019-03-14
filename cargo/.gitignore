@@ -1,3 +1,7 @@
+/target
 **/*.rs.bk
-.DS_Store
-!**/*.h
+.vscode
+*.key
+vk.sol
+VerificationKeys.sol
+start_demo.sh

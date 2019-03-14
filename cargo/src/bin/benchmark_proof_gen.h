@@ -3,4 +3,4 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-void main(void);
+void test_benchmark_proof_gen_for_ios(void);

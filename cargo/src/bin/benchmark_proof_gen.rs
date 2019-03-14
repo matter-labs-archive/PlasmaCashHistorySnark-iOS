@@ -27,7 +27,7 @@ const TREE_DEPTH: u32 = 24;
 const NUMBER_OF_BLOCKS_TO_PROVE: u32 = 128;
 
 #[no_mangle]
-pub extern fn main() {
+pub extern fn test_benchmark_proof_gen_for_ios() {
     let params = &AltJubjubBn256::new();
 
     let rng = &mut XorShiftRng::from_seed([0x3dbe6258, 0x8d313d76, 0x3237db17, 0xe5bc0654]);

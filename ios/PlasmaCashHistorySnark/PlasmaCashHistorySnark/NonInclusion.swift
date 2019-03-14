@@ -10,6 +10,6 @@ import Foundation
 
 class NonInclusion {
     func test() {
-        test_non_inclusion_proof()
+        test_non_inclusion_proof_for_ios()
     }
 }

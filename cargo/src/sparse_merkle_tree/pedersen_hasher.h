@@ -3,4 +3,4 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-void test_pedersen_hash(void);
+void test_pedersen_hash_for_ios(void);
