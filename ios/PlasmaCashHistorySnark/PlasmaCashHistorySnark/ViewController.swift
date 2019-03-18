@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         print("Non inclusion tested \n--------------------\n")
         PedersenHasher().test()
         print("Pedersen hasher tested \n--------------------\n")
-        BenchmarkProofGen().test()
+        BenchmarkProofGen().test(treeDepth: 24, numberOfBlocks: 1, nonInclusionLevel: 2)
         print("Tests finished")
     }
 

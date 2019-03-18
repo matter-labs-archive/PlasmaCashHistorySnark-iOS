@@ -1,10 +1,3 @@
-extern crate ff;
-extern crate pairing;
-extern crate rand;
-extern crate sapling_crypto;
-extern crate bellman;
-extern crate time;
-
 use time::PreciseTime;
 use ff::{PrimeField};
 use pairing::bn256::*;
@@ -22,11 +15,8 @@ use bellman::groth16::{
     verify_proof,
 };
 
-const TREE_DEPTH: u32 = 24;
-const NUMBER_OF_BLOCKS_TO_PROVE: u32 = 1;
-
 #[no_mangle]
-pub extern "C" fn test_benchmark_proof_gen_for_ios() {
+pub extern "C" fn test_benchmark_proof_gen_for_ios(tree_depth: u32, number_of_blocks: u32, non_inclusion_level: u32) {
     let params = &AltJubjubBn256::new();
 
     let rng = &mut XorShiftRng::from_seed([0x3dbe6258, 0x8d313d76, 0x3237db17, 0xe5bc0654]);
@@ -42,10 +32,10 @@ pub extern "C" fn test_benchmark_proof_gen_for_ios() {
     let start_of_slice = 0u32;
     let index_as_field_element = Fr::from_str(&start_of_slice.to_string()).unwrap();
 
-    for _ in 0..NUMBER_OF_BLOCKS_TO_PROVE {
+    for _ in 0..number_of_blocks {
         // create an empty tree
 
-        let mut tree = BabyTransactionTree::new(TREE_DEPTH);
+        let mut tree = BabyTransactionTree::new(tree_depth);
 
         // test will prove the large [0, 3] (length 4), 
         // so we need to enter non-zero element at the leaf number 4
@@ -97,15 +87,15 @@ pub extern "C" fn test_benchmark_proof_gen_for_ios() {
 
         let instance = NonInclusion {
             params: params,
-            number_of_blocks: NUMBER_OF_BLOCKS_TO_PROVE as usize,
+            number_of_blocks: number_of_blocks as usize,
             leaf_hash_length: 256,
-            tree_depth: TREE_DEPTH as usize,
+            tree_depth: tree_depth as usize,
             interval_length: Some(interval_length),
             index: Some(index_as_field_element),
             witness: witnesses.clone(),
         };
 
-        println!("Synthsizing a snark for {} block for {} tree depth", NUMBER_OF_BLOCKS_TO_PROVE, TREE_DEPTH);
+        println!("Synthsizing a snark for {} block for {} tree depth", number_of_blocks, tree_depth);
 
         instance.synthesize(&mut cs).unwrap();
 
@@ -113,7 +103,7 @@ pub extern "C" fn test_benchmark_proof_gen_for_ios() {
 
         println!("Number of constraints = {}", cs.num_constraints());
         // inputs are ONE, starting index, slice length + root * number of blocks 
-        // assert_eq!(cs.num_inputs(), (1 + 1 + 1 + NUMBER_OF_BLOCKS_TO_PROVE) as usize);
+        // assert_eq!(cs.num_inputs(), (1 + 1 + 1 + number_of_blocks) as usize);
 
         let err = cs.which_is_unsatisfied();
         if err.is_some() {
@@ -122,17 +112,17 @@ pub extern "C" fn test_benchmark_proof_gen_for_ios() {
     }
     let empty_witness: BlockWitness<Bn256> = BlockWitness {
             root: None,
-            proof: vec![None; TREE_DEPTH as usize]
+            proof: vec![None; tree_depth as usize]
         };
 
     let instance_for_generation = NonInclusion {
         params: params,
-        number_of_blocks: NUMBER_OF_BLOCKS_TO_PROVE as usize,
+        number_of_blocks: number_of_blocks as usize,
         leaf_hash_length: 256,
-        tree_depth: TREE_DEPTH as usize,
+        tree_depth: tree_depth as usize,
         interval_length: None,
         index: None,
-        witness: vec![empty_witness; NUMBER_OF_BLOCKS_TO_PROVE as usize],
+        witness: vec![empty_witness; number_of_blocks as usize],
     };
 
     println!("generating setup...");
@@ -142,9 +132,9 @@ pub extern "C" fn test_benchmark_proof_gen_for_ios() {
 
     let instance_for_proof = NonInclusion {
         params: params,
-        number_of_blocks: NUMBER_OF_BLOCKS_TO_PROVE as usize,
+        number_of_blocks: number_of_blocks as usize,
         leaf_hash_length: 256,
-        tree_depth: TREE_DEPTH as usize,
+        tree_depth: tree_depth as usize,
         interval_length: Some(interval_length),
         index: Some(index_as_field_element),
         witness: witnesses.clone(),

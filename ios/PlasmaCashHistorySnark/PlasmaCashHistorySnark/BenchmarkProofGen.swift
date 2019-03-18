@@ -9,7 +9,11 @@
 import Foundation
 
 class BenchmarkProofGen {
-    func test() {
-        test_benchmark_proof_gen_for_ios()
+    func test(treeDepth: UInt32,
+              numberOfBlocks: UInt32,
+              nonInclusionLevel: UInt32) {
+        test_benchmark_proof_gen_for_ios(treeDepth,
+                                         numberOfBlocks,
+                                         nonInclusionLevel)
     }
 }
