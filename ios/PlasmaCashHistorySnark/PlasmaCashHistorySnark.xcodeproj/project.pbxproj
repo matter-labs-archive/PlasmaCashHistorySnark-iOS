@@ -23,7 +23,7 @@
 		3A0C1FEF223A3FD100968304 /* non_inclusion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = non_inclusion.h; path = ../../../cargo/src/circuit/non_inclusion.h; sourceTree = "<group>"; };
 		3A0C1FF0223A3FD100968304 /* pedersen_hasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pedersen_hasher.h; path = ../../../cargo/src/sparse_merkle_tree/pedersen_hasher.h; sourceTree = "<group>"; };
 		3A0C1FF2223A401100968304 /* BenchmarkProofGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkProofGen.swift; sourceTree = "<group>"; };
-		3A0CD5E4223AAE5B00D0A4FE /* benchmark_proof_gen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = benchmark_proof_gen.h; path = ../../../cargo/src/transaction_tree/benchmark_proof_gen.h; sourceTree = "<group>"; };
+		3AE49493223FD15900AB2972 /* benchmark_proof_gen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = benchmark_proof_gen.h; path = ../../../cargo/src/benchmark_proof_gen/benchmark_proof_gen.h; sourceTree = "<group>"; };
 		E2A8DB6F21F5DC0F0031AC58 /* PlasmaCashHistorySnark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlasmaCashHistorySnark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A8DB7221F5DC0F0031AC58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2A8DB7421F5DC0F0031AC58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		E2A8DB7121F5DC0F0031AC58 /* PlasmaCashHistorySnark */ = {
 			isa = PBXGroup;
 			children = (
-				3A0CD5E4223AAE5B00D0A4FE /* benchmark_proof_gen.h */,
+				3AE49493223FD15900AB2972 /* benchmark_proof_gen.h */,
 				3A0C1FEF223A3FD100968304 /* non_inclusion.h */,
 				3A0C1FF0223A3FD100968304 /* pedersen_hasher.h */,
 				E2A8DB8A21F5DCBE0031AC58 /* PlasmaCashHistorySnark-Bridging-Header.h */,

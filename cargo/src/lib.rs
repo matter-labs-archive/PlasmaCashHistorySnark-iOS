@@ -12,6 +12,7 @@ extern crate ff;
 extern crate sapling_crypto;
 extern crate crypto;
 
+pub mod benchmark_proof_gen;
 pub mod sparse_merkle_tree;
 pub mod transaction_tree;
 pub mod circuit;
